@@ -1,6 +1,6 @@
 import timestamps from 'mongoose-timestamp';
 import { plugins } from 'mostly-feathers-mongoose';
-import { models as actions } from 'playing-actions-services';
+import { models as actions } from 'playing-action-services';
 
 /*
  * Leaderboard are a system which rank players based upon their scores.
