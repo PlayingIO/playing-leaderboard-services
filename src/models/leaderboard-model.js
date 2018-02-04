@@ -1,6 +1,6 @@
 import timestamps from 'mongoose-timestamp';
 import { plugins } from 'mostly-feathers-mongoose';
-import { models as actions } from 'playing-action-services';
+import { models as rules } from 'playing-rule-services';
 
 /*
  * Leaderboard are a system which rank players based upon their scores.
@@ -38,7 +38,7 @@ const fields = {
     'weekly',
     'daily'
   ]},
-  requires: actions.rule.requires,           // visibility requirements for the leaderboard
+  requires: rules.rule.requires,           // visibility requirements for the leaderboard
   tags: [{ type: 'String' }],                // tags of leaderboard
 };
 
