@@ -1,6 +1,6 @@
 import { hooks as auth } from 'feathers-authentication';
 import { hooks } from 'mostly-feathers-mongoose';
-import LeaderBoardEntity from '~/entities/leaderboard-entity';
+import LeaderboardEntity from '~/entities/leaderboard-entity';
 
 module.exports = function(options = {}) {
   return {
@@ -17,7 +17,7 @@ module.exports = function(options = {}) {
     },
     after: {
       all: [
-        hooks.presentEntity(LeaderBoardEntity, options),
+        hooks.presentEntity(LeaderboardEntity, options),
         hooks.responder()
       ]
     }
