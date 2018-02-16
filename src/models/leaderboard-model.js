@@ -8,36 +8,30 @@ import { models as rules } from 'playing-rule-services';
 const fields = {
   name: { type: String, required: true },  // name for the leaderboard
   description: { type: String },           // brief description of the leaderboard
-  metric: {                                // metric on which this leaderboard is based upon
-    id: { type: 'ObjectId' },
-    type: { type: String, enum: [
-      'point',
-      'compound'
-    ]}
-  },
+  metric: { type: 'ObjectId' },            // metric on which this leaderboard is based upon
   scope: {                                 // scope on which this leaderboard operates
-    id: { type: String },                  // id of team definition or team instance
+    id: { type: String },                  // id of team definition or group instance
     type: { type: String, enum: [
-      'game',
-      'team_definition',
-      'team_instance',
+      'every',
+      'team',
+      'group',
       'custom'
     ]}
   },
   type: { type: String, enum: [            // ranking type of the leaderboard
-    'regular']
-  },
-  entityType: { type: String, enum: [      // type of leaderboard whether its for players or teams
+    'regular'
+  ]},
+  entity: { type: String, enum: [          // type of leaderboard whether its for players or teams
     'players',
     'teams'
   ]},
-  cycles: { type: String, enum: [          // interval in which the leaderboard is reset
+  cycles: [{ type: String, enum: [         // interval in which the leaderboard is reset
     'alltime',
     'yearly',
     'monthly',
     'weekly',
     'daily'
-  ]},
+  ]}],
   requires: rules.rule.requires,           // visibility requirements for the leaderboard
   tags: [{ type: String }],                // tags of the leaderboard
 };
