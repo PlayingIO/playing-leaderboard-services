@@ -15,7 +15,7 @@ const fields = {
       'compound'
     ]}
   },
-  metric: {                                // scope on which this leaderboard operates
+  scope: {                                 // scope on which this leaderboard operates
     id: { type: String },                  // id of team definition or team instance
     type: { type: String, enum: [
       'game',
