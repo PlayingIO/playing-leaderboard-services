@@ -25,7 +25,13 @@ const fields = {
     'players',
     'teams'
   ]},
-  cycles: { type: Array },                 // interval in which the leaderboard is reset
+  cycles: [{ type: String, enum: [         // interval in which the leaderboard is reset
+    'alltime',
+    'yearly',
+    'monthly',
+    'weekly',
+    'daily'
+  ]}],
   requires: rules.rule.requires,           // visibility requirements for the leaderboard
   tags: [{ type: String }],                // tags of the leaderboard
 };
