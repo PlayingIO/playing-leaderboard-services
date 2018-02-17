@@ -12,25 +12,18 @@ const fields = {
   scope: {                                 // scope on which this leaderboard operates
     id: { type: String },                  // id of team definition or group instance
     type: { type: String, enum: [
-      'every',
-      'team',
-      'group',
-      'custom'
+      'every', 'team', 'group', 'custom'
     ]}
   },
   type: { type: String, enum: [            // ranking type of the leaderboard
     'regular'
-  ]},
+  ], default: 'regular' },
   entity: { type: String, enum: [          // type of leaderboard whether its for players or teams
     'players',
     'teams'
   ]},
   cycles: [{ type: String, enum: [         // interval in which the leaderboard is reset
-    'alltime',
-    'yearly',
-    'monthly',
-    'weekly',
-    'daily'
+    'alltime', 'yearly', 'monthly', 'weekly', 'daily'
   ]}],
   requires: rules.rule.requires,           // visibility requirements for the leaderboard
   tags: [{ type: String }],                // tags of the leaderboard
