@@ -1,6 +1,9 @@
-import timestamps from 'mongoose-timestamp';
 import { plugins } from 'mostly-feathers-mongoose';
 import { models as rules } from 'playing-rule-services';
+
+const options = {
+  timestamps: true
+};
 
 /*
  * Leaderboard are a system which rank players based upon their scores.
@@ -31,8 +34,7 @@ const fields = {
 
 export default function model (app, name) {
   const mongoose = app.get('mongoose');
-  const schema = new mongoose.Schema(fields);
-  schema.plugin(timestamps);
+  const schema = new mongoose.Schema(fields, options);
   schema.plugin(plugins.softDelete);
   return mongoose.model(name, schema);
 }
