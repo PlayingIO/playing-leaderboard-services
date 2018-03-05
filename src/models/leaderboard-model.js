@@ -28,7 +28,7 @@ const fields = {
   cycles: [{ type: String, enum: [         // interval in which the leaderboard is reset
     'alltime', 'yearly', 'monthly', 'weekly', 'daily'
   ]}],
-  requires: rules.rule.requires,           // visibility requirements for the leaderboard
+  requires: rules.requires.schema,         // visibility requirements for the leaderboard
   tags: [{ type: String }],                // tags of the leaderboard
 };
 
