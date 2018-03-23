@@ -3,7 +3,7 @@ import { cache } from 'mostly-feathers-cache';
 
 import LeaderboardEntity from '~/entities/leaderboard.entity';
 
-module.exports = function (options = {}) {
+export default function (options = {}) {
   return {
     before: {
       all: [
