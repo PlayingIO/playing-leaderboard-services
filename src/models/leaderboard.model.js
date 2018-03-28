@@ -5,7 +5,7 @@ const options = {
   timestamps: true
 };
 
-/*
+/**
  * Leaderboard are a system which rank players based upon their scores.
  */
 const fields = {
