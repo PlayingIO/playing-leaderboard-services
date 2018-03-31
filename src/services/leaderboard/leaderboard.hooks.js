@@ -1,7 +1,7 @@
 import { hooks } from 'mostly-feathers-mongoose';
 import { cache } from 'mostly-feathers-cache';
 
-import LeaderboardEntity from '~/entities/leaderboard.entity';
+import LeaderboardEntity from '../../entities/leaderboard.entity';
 
 export default function (options = {}) {
   return {
