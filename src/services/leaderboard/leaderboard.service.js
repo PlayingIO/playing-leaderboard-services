@@ -6,7 +6,7 @@ import fp from 'mostly-func';
 import LeaderboardModel from '../../models/leaderboard.model';
 import defaultHooks from './leaderboard.hooks';
 
-const debug = makeDebug('playing:leaderboards-services:leaderboards');
+const debug = makeDebug('playing:leaderboard-services:leaderboards');
 
 const defaultOptions = {
   name: 'leaderboards'
