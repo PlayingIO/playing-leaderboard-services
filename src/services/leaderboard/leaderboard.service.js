@@ -14,7 +14,7 @@ const defaultOptions = {
 
 export class LeaderboardService extends Service {
   constructor (options) {
-    options = Object.assign({}, defaultOptions, options);
+    options = fp.assign(defaultOptions, options);
     super(options);
   }
 
@@ -25,7 +25,7 @@ export class LeaderboardService extends Service {
 }
 
 export default function init (app, options, hooks) {
-  options = Object.assign({ ModelName: 'leaderboard' }, options);
+  options = fp.assign({ ModelName: 'leaderboard' }, options);
   return createService(app, LeaderboardService, LeaderboardModel, options);
 }
 
