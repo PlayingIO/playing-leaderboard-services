@@ -25,7 +25,7 @@ export class LeaderboardService extends Service {
 }
 
 export default function init (app, options, hooks) {
-  options = fp.assign({ ModelName: 'leaderboard' }, options);
+  options = { ModelName: 'leaderboard', ...options };
   return createService(app, LeaderboardService, LeaderboardModel, options);
 }
 
