@@ -1,7 +1,7 @@
 {
   "name": "playing-leaderboard-services",
   "version": "1.0.11",
-  "description": "Leaderboard management microservices for playful applications",
+  "description": "Leaderboard management microservices for building playful applications",
   "author": "Forafish",
   "license": "MIT",
   "main": "index.js",

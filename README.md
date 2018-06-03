@@ -1,7 +1,7 @@
 Playing Leaderboard Services
 ============================
 
-Leaderboard management microservices for playful applications.
+Leaderboard management microservices for building playful applications.
 
 # Usage
 
