@@ -5,6 +5,6 @@ const LeaderboardEntity = new Entity('Leaderboard', {
   image: { using: BlobEntity }
 });
 
-LeaderboardEntity.excepts('_id');
+LeaderboardEntity.discard('_id');
 
 export default LeaderboardEntity.asImmutable();
