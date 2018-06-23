@@ -7,4 +7,4 @@ const LeaderboardEntity = new Entity('Leaderboard', {
 
 LeaderboardEntity.discard('_id');
 
-export default LeaderboardEntity.asImmutable();
+export default LeaderboardEntity.freeze();
