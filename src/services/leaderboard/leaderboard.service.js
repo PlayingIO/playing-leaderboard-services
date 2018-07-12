@@ -1,10 +1,10 @@
-import assert from 'assert';
-import makeDebug from 'debug';
-import { Service, createService } from 'mostly-feathers-mongoose';
-import fp from 'mostly-func';
+const assert = require('assert');
+const makeDebug = require('debug');
+const { Service, createService } = require('mostly-feathers-mongoose');
+const fp = require('mostly-func');
 
-import LeaderboardModel from '../../models/leaderboard.model';
-import defaultHooks from './leaderboard.hooks';
+const LeaderboardModel = require('../../models/leaderboard.model');
+const defaultHooks = require('./leaderboard.hooks');
 
 const debug = makeDebug('playing:leaderboard-services:leaderboards');
 
@@ -12,7 +12,7 @@ const defaultOptions = {
   name: 'leaderboards'
 };
 
-export class LeaderboardService extends Service {
+class LeaderboardService extends Service {
   constructor (options) {
     options = fp.assignAll(defaultOptions, options);
     super(options);
@@ -24,9 +24,8 @@ export class LeaderboardService extends Service {
   }
 }
 
-export default function init (app, options, hooks) {
+module.exports = function init (app, options, hooks) {
   options = { ModelName: 'leaderboard', ...options };
   return createService(app, LeaderboardService, LeaderboardModel, options);
-}
-
-init.Service = LeaderboardService;
+};
+module.exports.Service = LeaderboardService;

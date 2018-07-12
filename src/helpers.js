@@ -1,3 +1,3 @@
-import fp from 'mostly-func';
+const fp = require('mostly-func');
 
-export default {};
+module.exports = {};
